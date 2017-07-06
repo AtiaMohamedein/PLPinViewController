@@ -37,7 +37,12 @@
     PLPinViewController *vc = (PLPinViewController*)[PLPinWindow defaultInstance].rootViewController;
     self.messageLabel.text = [NSString stringWithFormat:@"Enter a %ld digit pin to keep your data safe",(long)vc.pinLength];
     pinElement = [PLFormPinFieldElement pinFieldElementWithID:0 pinLength:vc.pinLength delegate:self];
-    
+    // TODO: update underline color and copy it every view controller
+//    pinElement..unselectedUnderlineColor = [PLPinWindow defaultInstance].pinAppearance.unselectedUnderlineColor;
+//    pinElement.selectedUnderlineColor = [PLPinWindow defaultInstance].pinAppearance.selectedUnderlineColor;
+//    pinElement.highlightedUnderlineColor = [PLPinWindow defaultInstance].pinAppearance.highlightedUnderlineColor;
+
+    pinElement.enableUnderline = [PLPinWindow defaultInstance].pinAppearance.enableUnderline;
     pinElement.dotSize = [PLPinWindow defaultInstance].pinAppearance.pinSize;
     [self.pinField updateWithElement:pinElement];
     

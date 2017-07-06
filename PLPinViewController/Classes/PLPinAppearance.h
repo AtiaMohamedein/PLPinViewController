@@ -33,4 +33,11 @@
 
 @property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
 
+@property (nonatomic,strong) UIColor *unselectedUnderlineColor;
+@property (nonatomic,strong) UIColor *selectedUnderlineColor;
+@property (nonatomic,strong) UIColor *highlightedUnderlineColor;
+
+@property (nonatomic, assign) BOOL enableUnderline;
+
+
 @end

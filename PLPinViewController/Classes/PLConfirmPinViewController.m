@@ -36,6 +36,8 @@
     
     pinElement = [PLFormPinFieldElement pinFieldElementWithID:0 pinLength:vc.pinLength delegate:self];
     pinElement.dotSize = [PLPinWindow defaultInstance].pinAppearance.pinSize;
+    pinElement.enableUnderline = [PLPinWindow defaultInstance].pinAppearance.enableUnderline;
+
     [self.pinField updateWithElement:pinElement];
     
     [self.pinField becomeFirstResponder];
